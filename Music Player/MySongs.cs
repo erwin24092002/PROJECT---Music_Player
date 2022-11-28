@@ -16,6 +16,11 @@ namespace Music_Player
         public MySongs()
         {
             Songs = new DataTable();
+            Songs.Columns.Add("id");
+            Songs.Columns.Add("id");
+            Songs.Columns.Add("id");
+            Songs.Columns.Add("id");
+
         }
     }
 }
