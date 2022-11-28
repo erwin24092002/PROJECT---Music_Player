@@ -37,7 +37,7 @@
             this.pTitleChileForm = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.pSong = new System.Windows.Forms.Panel();
+            this.pSongPlayer = new System.Windows.Forms.Panel();
             this.pChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pMenu.SuspendLayout();
@@ -137,7 +137,7 @@
             this.pTitleChileForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitleChileForm.Location = new System.Drawing.Point(215, 0);
             this.pTitleChileForm.Name = "pTitleChileForm";
-            this.pTitleChileForm.Size = new System.Drawing.Size(1120, 33);
+            this.pTitleChileForm.Size = new System.Drawing.Size(1149, 33);
             this.pTitleChileForm.TabIndex = 1;
             this.pTitleChileForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitleChileForm_MouseDown);
             // 
@@ -151,7 +151,7 @@
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 30;
             this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimize.Location = new System.Drawing.Point(1034, 5);
+            this.btnMinimize.Location = new System.Drawing.Point(1065, 5);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(37, 27);
             this.btnMinimize.TabIndex = 1;
@@ -167,7 +167,7 @@
             this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 40;
-            this.btnExit.Location = new System.Drawing.Point(1078, 5);
+            this.btnExit.Location = new System.Drawing.Point(1109, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(37, 27);
             this.btnExit.TabIndex = 0;
@@ -176,14 +176,14 @@
             this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
             this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
             // 
-            // pSong
+            // pSongPlayer
             // 
-            this.pSong.BackColor = System.Drawing.Color.White;
-            this.pSong.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pSong.Location = new System.Drawing.Point(1013, 33);
-            this.pSong.Name = "pSong";
-            this.pSong.Size = new System.Drawing.Size(322, 520);
-            this.pSong.TabIndex = 3;
+            this.pSongPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.pSongPlayer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pSongPlayer.Location = new System.Drawing.Point(998, 33);
+            this.pSongPlayer.Name = "pSongPlayer";
+            this.pSongPlayer.Size = new System.Drawing.Size(366, 520);
+            this.pSongPlayer.TabIndex = 3;
             // 
             // pChildForm
             // 
@@ -192,7 +192,7 @@
             this.pChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pChildForm.Location = new System.Drawing.Point(215, 33);
             this.pChildForm.Name = "pChildForm";
-            this.pChildForm.Size = new System.Drawing.Size(798, 520);
+            this.pChildForm.Size = new System.Drawing.Size(783, 520);
             this.pChildForm.TabIndex = 4;
             // 
             // pictureBox1
@@ -210,9 +210,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(1335, 553);
+            this.ClientSize = new System.Drawing.Size(1364, 553);
             this.Controls.Add(this.pChildForm);
-            this.Controls.Add(this.pSong);
+            this.Controls.Add(this.pSongPlayer);
             this.Controls.Add(this.pTitleChileForm);
             this.Controls.Add(this.pMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -236,7 +236,7 @@
         private FontAwesome.Sharp.IconButton btnSongs;
         private FontAwesome.Sharp.IconButton btnPlaylists;
         private System.Windows.Forms.Panel pTitleChileForm;
-        private System.Windows.Forms.Panel pSong;
+        private System.Windows.Forms.Panel pSongPlayer;
         private System.Windows.Forms.Panel pChildForm;
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnMinimize;
