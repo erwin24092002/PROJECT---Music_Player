@@ -40,12 +40,15 @@
             this.pSongPlayer = new System.Windows.Forms.Panel();
             this.pChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pMenu.SuspendLayout();
             this.pLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.pTitleChileForm.SuspendLayout();
+            this.pSongPlayer.SuspendLayout();
             this.pChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenu
@@ -179,6 +182,7 @@
             // pSongPlayer
             // 
             this.pSongPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.pSongPlayer.Controls.Add(this.pictureBox2);
             this.pSongPlayer.Dock = System.Windows.Forms.DockStyle.Right;
             this.pSongPlayer.Location = new System.Drawing.Point(998, 33);
             this.pSongPlayer.Name = "pSongPlayer";
@@ -205,6 +209,16 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Music_Player.Properties.Resources.nobg_nomusic;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(360, 408);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // fMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,8 +237,10 @@
             this.pLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.pTitleChileForm.ResumeLayout(false);
+            this.pSongPlayer.ResumeLayout(false);
             this.pChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,6 +258,7 @@
         private FontAwesome.Sharp.IconButton btnMinimize;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
