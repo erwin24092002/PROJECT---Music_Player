@@ -38,17 +38,17 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.pSongPlayer = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pMenu.SuspendLayout();
             this.pLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.pTitleChileForm.SuspendLayout();
             this.pSongPlayer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenu
@@ -76,7 +76,7 @@
             this.btnPlaylists.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPlaylists.IconSize = 32;
             this.btnPlaylists.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylists.Location = new System.Drawing.Point(0, 159);
+            this.btnPlaylists.Location = new System.Drawing.Point(0, 178);
             this.btnPlaylists.Name = "btnPlaylists";
             this.btnPlaylists.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPlaylists.Size = new System.Drawing.Size(215, 55);
@@ -100,7 +100,7 @@
             this.btnSongs.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSongs.IconSize = 32;
             this.btnSongs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSongs.Location = new System.Drawing.Point(0, 104);
+            this.btnSongs.Location = new System.Drawing.Point(0, 123);
             this.btnSongs.Name = "btnSongs";
             this.btnSongs.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSongs.Size = new System.Drawing.Size(215, 55);
@@ -117,7 +117,7 @@
             this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pLogo.Location = new System.Drawing.Point(0, 0);
             this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(215, 104);
+            this.pLogo.Size = new System.Drawing.Size(215, 123);
             this.pLogo.TabIndex = 0;
             // 
             // ptbLogo
@@ -126,7 +126,7 @@
             this.ptbLogo.Image = global::Music_Player.Properties.Resources.nobg_logo;
             this.ptbLogo.Location = new System.Drawing.Point(3, 3);
             this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(209, 89);
+            this.ptbLogo.Size = new System.Drawing.Size(209, 95);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbLogo.TabIndex = 1;
             this.ptbLogo.TabStop = false;
@@ -189,6 +189,16 @@
             this.pSongPlayer.Size = new System.Drawing.Size(366, 520);
             this.pSongPlayer.TabIndex = 3;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Music_Player.Properties.Resources.nobg_nomusic;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(360, 408);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // pChildForm
             // 
             this.pChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -209,16 +219,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Music_Player.Properties.Resources.nobg_nomusic;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(360, 408);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // fMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,9 +238,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.pTitleChileForm.ResumeLayout(false);
             this.pSongPlayer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

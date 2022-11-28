@@ -29,21 +29,27 @@
         private void InitializeComponent()
         {
             this.pSearch = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.gbType = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbVPop = new System.Windows.Forms.CheckBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txbSearch = new System.Windows.Forms.TextBox();
             this.flpSongs = new System.Windows.Forms.FlowLayoutPanel();
-            this.gbType = new System.Windows.Forms.GroupBox();
-            this.cbVPop = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.pSearch.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.gbType.SuspendLayout();
             this.SuspendLayout();
             // 
             // pSearch
             // 
+            this.pSearch.Controls.Add(this.groupBox1);
             this.pSearch.Controls.Add(this.gbType);
             this.pSearch.Controls.Add(this.btnSearch);
             this.pSearch.Controls.Add(this.txbSearch);
@@ -52,6 +58,124 @@
             this.pSearch.Name = "pSearch";
             this.pSearch.Size = new System.Drawing.Size(765, 90);
             this.pSearch.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBox7);
+            this.groupBox1.Controls.Add(this.checkBox8);
+            this.groupBox1.Controls.Add(this.checkBox9);
+            this.groupBox1.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.groupBox1.Location = new System.Drawing.Point(464, 37);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(275, 49);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Quality";
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox7.Location = new System.Drawing.Point(203, 24);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(65, 22);
+            this.checkBox7.TabIndex = 2;
+            this.checkBox7.Text = "High";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox8.Location = new System.Drawing.Point(109, 24);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(88, 22);
+            this.checkBox8.TabIndex = 1;
+            this.checkBox8.Text = "Medium";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox9.Location = new System.Drawing.Point(26, 24);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(60, 22);
+            this.checkBox9.TabIndex = 0;
+            this.checkBox9.Text = "Low";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // gbType
+            // 
+            this.gbType.Controls.Add(this.checkBox4);
+            this.gbType.Controls.Add(this.checkBox3);
+            this.gbType.Controls.Add(this.checkBox2);
+            this.gbType.Controls.Add(this.checkBox1);
+            this.gbType.Controls.Add(this.cbVPop);
+            this.gbType.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbType.ForeColor = System.Drawing.Color.Gainsboro;
+            this.gbType.Location = new System.Drawing.Point(35, 37);
+            this.gbType.Name = "gbType";
+            this.gbType.Size = new System.Drawing.Size(408, 49);
+            this.gbType.TabIndex = 2;
+            this.gbType.TabStop = false;
+            this.gbType.Text = "Type";
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.Location = new System.Drawing.Point(322, 24);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(75, 22);
+            this.checkBox4.TabIndex = 4;
+            this.checkBox4.Text = "USUK";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(248, 24);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(69, 22);
+            this.checkBox3.TabIndex = 3;
+            this.checkBox3.Text = "KPop";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(174, 24);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(68, 22);
+            this.checkBox2.TabIndex = 2;
+            this.checkBox2.Text = "CPop";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(100, 24);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(65, 22);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "JPop";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // cbVPop
+            // 
+            this.cbVPop.AutoSize = true;
+            this.cbVPop.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbVPop.Location = new System.Drawing.Point(26, 24);
+            this.cbVPop.Name = "cbVPop";
+            this.cbVPop.Size = new System.Drawing.Size(68, 22);
+            this.cbVPop.TabIndex = 0;
+            this.cbVPop.Text = "VPop";
+            this.cbVPop.UseVisualStyleBackColor = true;
             // 
             // btnSearch
             // 
@@ -87,77 +211,6 @@
             this.flpSongs.Size = new System.Drawing.Size(765, 383);
             this.flpSongs.TabIndex = 1;
             // 
-            // gbType
-            // 
-            this.gbType.Controls.Add(this.checkBox4);
-            this.gbType.Controls.Add(this.checkBox3);
-            this.gbType.Controls.Add(this.checkBox2);
-            this.gbType.Controls.Add(this.checkBox1);
-            this.gbType.Controls.Add(this.cbVPop);
-            this.gbType.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbType.ForeColor = System.Drawing.Color.Gainsboro;
-            this.gbType.Location = new System.Drawing.Point(50, 38);
-            this.gbType.Name = "gbType";
-            this.gbType.Size = new System.Drawing.Size(408, 49);
-            this.gbType.TabIndex = 2;
-            this.gbType.TabStop = false;
-            this.gbType.Text = "Type";
-            // 
-            // cbVPop
-            // 
-            this.cbVPop.AutoSize = true;
-            this.cbVPop.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbVPop.Location = new System.Drawing.Point(26, 24);
-            this.cbVPop.Name = "cbVPop";
-            this.cbVPop.Size = new System.Drawing.Size(68, 22);
-            this.cbVPop.TabIndex = 0;
-            this.cbVPop.Text = "VPop";
-            this.cbVPop.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(100, 24);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(65, 22);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "JPop";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(174, 24);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(68, 22);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "CPop";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(248, 24);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(69, 22);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "KPop";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(322, 24);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(75, 22);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "USUK";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
             // fSongs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -170,6 +223,8 @@
             this.Text = "fSongs";
             this.pSearch.ResumeLayout(false);
             this.pSearch.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.gbType.ResumeLayout(false);
             this.gbType.PerformLayout();
             this.ResumeLayout(false);
@@ -188,5 +243,9 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox9;
     }
 }
