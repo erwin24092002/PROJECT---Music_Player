@@ -65,6 +65,12 @@
     <Compile Include="Forms\fPlaylists.Designer.cs">
       <DependentUpon>fPlaylists.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fSongPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fSongPlayer.Designer.cs">
+      <DependentUpon>fSongPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fSongs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fPlaylists.resx">
       <DependentUpon>fPlaylists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fSongPlayer.resx">
+      <DependentUpon>fSongPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fSongs.resx">
       <DependentUpon>fSongs.cs</DependentUpon>

@@ -19,6 +19,7 @@ namespace Music_Player
         private Panel leftBorderBtn;
         private MyColors myColors = new MyColors();
         private Form currentChildForm;
+        private Form currentMusicPlayer;
         public fMainMenu()
         {
             InitializeComponent();
@@ -80,6 +81,22 @@ namespace Music_Player
             childForm.Show();
         }
 
+        private void OpenMusicPlayer(Form musicPlayer)
+        {
+            if (currentMusicPlayer != null)
+            {
+                currentMusicPlayer.Close();
+            }
+            currentMusicPlayer = musicPlayer;
+            musicPlayer.TopLevel = false;
+            musicPlayer.FormBorderStyle = FormBorderStyle.None;
+            musicPlayer.Dock = DockStyle.Fill;
+            pSongPlayer.Controls.Add(musicPlayer);
+            pSongPlayer.Tag = musicPlayer;
+            musicPlayer.BringToFront();
+            musicPlayer.Show();
+        }
+
         private void btnSongs_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, myColors.RGBColors[0]);
@@ -99,6 +116,10 @@ namespace Music_Player
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
+            }
+            if (currentMusicPlayer != null)
+            {
+                currentMusicPlayer.Close();
             }
         }
 
