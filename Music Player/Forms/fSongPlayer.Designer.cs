@@ -58,7 +58,7 @@
             // 
             // pContent
             // 
-            this.pContent.Location = new System.Drawing.Point(0, 274);
+            this.pContent.Location = new System.Drawing.Point(0, 270);
             this.pContent.Name = "pContent";
             this.pContent.Size = new System.Drawing.Size(378, 350);
             this.pContent.TabIndex = 4;
@@ -79,7 +79,7 @@
             this.btnReview.Location = new System.Drawing.Point(190, 3);
             this.btnReview.Name = "btnReview";
             this.btnReview.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnReview.Size = new System.Drawing.Size(173, 38);
+            this.btnReview.Size = new System.Drawing.Size(172, 38);
             this.btnReview.TabIndex = 3;
             this.btnReview.Text = "Review";
             this.btnReview.UseVisualStyleBackColor = true;
@@ -98,10 +98,10 @@
             this.btnDiscription.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDiscription.IconSize = 32;
             this.btnDiscription.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDiscription.Location = new System.Drawing.Point(15, 3);
+            this.btnDiscription.Location = new System.Drawing.Point(16, 3);
             this.btnDiscription.Name = "btnDiscription";
             this.btnDiscription.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDiscription.Size = new System.Drawing.Size(175, 38);
+            this.btnDiscription.Size = new System.Drawing.Size(174, 38);
             this.btnDiscription.TabIndex = 2;
             this.btnDiscription.Text = "Discription";
             this.btnDiscription.UseVisualStyleBackColor = true;
