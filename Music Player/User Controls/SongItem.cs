@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using Music_Player.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +17,12 @@ namespace Music_Player.User_Controls
     public partial class SongItem : UserControl
     {
         private DataRow song;
+        private Color[] rgbColors;
         public SongItem(DataRow s)
         {
             InitializeComponent();
             song = s;
+            rgbColors = new MyColors().RGBColors;
 
             ResourceManager songImageManager = new ResourceManager("Music_Player.SongImages", Assembly.GetExecutingAssembly());
             ptbSongImage.BackgroundImage = (Image)songImageManager.GetObject(string.Join("_", song["name"].ToString().Split(' ')));
@@ -27,6 +31,17 @@ namespace Music_Player.User_Controls
             lbSongName.Text = song["name"].ToString();
             lbSongSinger.Text = song["singer"].ToString();
             lbSongDate.Text = song["date"].ToString();
+
+            btnPlay.Tag = song;
+        }
+
+        private void Button_Hover(object sender, EventArgs e)
+        {
+            ((IconButton)sender).IconColor = rgbColors[0];
+        }
+        private void Button_Leave(object sender, EventArgs e)
+        {
+            ((IconButton)sender).IconColor = Color.Gainsboro;
         }
     }
 }

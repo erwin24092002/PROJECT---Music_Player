@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using Music_Player.Forms;
+using Music_Player.User_Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace Music_Player
         private Panel leftBorderBtn;
         private MyColors myColors = new MyColors();
         private Form currentChildForm;
-        private Form currentMusicPlayer;
+        public Form currentMusicPlayer;
         public fMainMenu()
         {
             InitializeComponent();
@@ -81,13 +82,14 @@ namespace Music_Player
             childForm.Show();
         }
 
-        private void OpenMusicPlayer(Form musicPlayer)
+        public void OpenMusicPlayer(Form musicPlayer)
         {
             if (currentMusicPlayer != null)
             {
                 currentMusicPlayer.Close();
             }
             currentMusicPlayer = musicPlayer;
+            musicPlayer.Size = pSongPlayer.Size;
             musicPlayer.TopLevel = false;
             musicPlayer.FormBorderStyle = FormBorderStyle.None;
             musicPlayer.Dock = DockStyle.Fill;
@@ -100,7 +102,17 @@ namespace Music_Player
         private void btnSongs_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, myColors.RGBColors[0]);
-            OpenChildForm(new fSongs());
+            fSongs f = new fSongs();
+            foreach (SongItem songItem in f.flpSongs.Controls)
+            {
+                songItem.btnPlay.Click += btnPlay_Click;
+            }
+            OpenChildForm(f);
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            OpenMusicPlayer(new fSongPlayer((DataRow)((IconButton)sender).Tag));
         }
 
         private void btnPlaylists_Click(object sender, EventArgs e)

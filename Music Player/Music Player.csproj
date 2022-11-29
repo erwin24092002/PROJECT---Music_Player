@@ -86,6 +86,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SongImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\Description.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Description.Designer.cs">
+      <DependentUpon>Description.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\SongItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <EmbeddedResource Include="SongImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SongImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Description.resx">
+      <DependentUpon>Description.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\SongItem.resx">
       <DependentUpon>SongItem.cs</DependentUpon>

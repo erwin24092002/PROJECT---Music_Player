@@ -93,6 +93,8 @@
             this.btnDownload.Size = new System.Drawing.Size(40, 40);
             this.btnDownload.TabIndex = 4;
             this.btnDownload.UseVisualStyleBackColor = true;
+            this.btnDownload.MouseLeave += new System.EventHandler(this.Button_Leave);
+            this.btnDownload.MouseHover += new System.EventHandler(this.Button_Hover);
             // 
             // btnCollect
             // 
@@ -109,6 +111,8 @@
             this.btnCollect.Size = new System.Drawing.Size(40, 40);
             this.btnCollect.TabIndex = 5;
             this.btnCollect.UseVisualStyleBackColor = true;
+            this.btnCollect.MouseLeave += new System.EventHandler(this.Button_Leave);
+            this.btnCollect.MouseHover += new System.EventHandler(this.Button_Hover);
             // 
             // btnHeart
             // 
@@ -125,6 +129,8 @@
             this.btnHeart.Size = new System.Drawing.Size(40, 40);
             this.btnHeart.TabIndex = 6;
             this.btnHeart.UseVisualStyleBackColor = true;
+            this.btnHeart.MouseLeave += new System.EventHandler(this.Button_Leave);
+            this.btnHeart.MouseHover += new System.EventHandler(this.Button_Hover);
             // 
             // btnPlay
             // 
@@ -141,6 +147,8 @@
             this.btnPlay.Size = new System.Drawing.Size(40, 40);
             this.btnPlay.TabIndex = 7;
             this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.MouseLeave += new System.EventHandler(this.Button_Leave);
+            this.btnPlay.MouseHover += new System.EventHandler(this.Button_Hover);
             // 
             // SongItem
             // 
@@ -174,6 +182,6 @@
         private FontAwesome.Sharp.IconButton btnDownload;
         private FontAwesome.Sharp.IconButton btnCollect;
         private FontAwesome.Sharp.IconButton btnHeart;
-        private FontAwesome.Sharp.IconButton btnPlay;
+        public FontAwesome.Sharp.IconButton btnPlay;
     }
 }
