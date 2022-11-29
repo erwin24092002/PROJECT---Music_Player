@@ -12,9 +12,13 @@ namespace Music_Player.Forms
 {
     public partial class fSongPlayer : Form
     {
-        public fSongPlayer()
+        private DataRow song;
+        public fSongPlayer(DataRow s)
         {
             InitializeComponent();
+            this.song = s;
+
+
         }
     }
 }

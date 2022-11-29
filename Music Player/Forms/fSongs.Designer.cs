@@ -61,6 +61,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.cbHigh);
             this.groupBox1.Controls.Add(this.cbMedium);
             this.groupBox1.Controls.Add(this.cbLow);
@@ -78,6 +79,7 @@
             this.cbHigh.AutoSize = true;
             this.cbHigh.Checked = true;
             this.cbHigh.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbHigh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbHigh.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHigh.Location = new System.Drawing.Point(203, 24);
             this.cbHigh.Name = "cbHigh";
@@ -91,6 +93,7 @@
             this.cbMedium.AutoSize = true;
             this.cbMedium.Checked = true;
             this.cbMedium.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbMedium.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbMedium.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMedium.Location = new System.Drawing.Point(104, 24);
             this.cbMedium.Name = "cbMedium";
@@ -104,6 +107,7 @@
             this.cbLow.AutoSize = true;
             this.cbLow.Checked = true;
             this.cbLow.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbLow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbLow.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLow.Location = new System.Drawing.Point(26, 24);
             this.cbLow.Name = "cbLow";
@@ -114,6 +118,7 @@
             // 
             // gbType
             // 
+            this.gbType.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbType.Controls.Add(this.cbUSUK);
             this.gbType.Controls.Add(this.cbKPop);
             this.gbType.Controls.Add(this.cbCPop);
@@ -121,7 +126,7 @@
             this.gbType.Controls.Add(this.cbVPop);
             this.gbType.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbType.ForeColor = System.Drawing.Color.Gainsboro;
-            this.gbType.Location = new System.Drawing.Point(35, 37);
+            this.gbType.Location = new System.Drawing.Point(33, 37);
             this.gbType.Name = "gbType";
             this.gbType.Size = new System.Drawing.Size(408, 49);
             this.gbType.TabIndex = 2;
@@ -133,6 +138,7 @@
             this.cbUSUK.AutoSize = true;
             this.cbUSUK.Checked = true;
             this.cbUSUK.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbUSUK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbUSUK.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUSUK.Location = new System.Drawing.Point(322, 24);
             this.cbUSUK.Name = "cbUSUK";
@@ -146,6 +152,7 @@
             this.cbKPop.AutoSize = true;
             this.cbKPop.Checked = true;
             this.cbKPop.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbKPop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbKPop.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbKPop.Location = new System.Drawing.Point(248, 24);
             this.cbKPop.Name = "cbKPop";
@@ -159,6 +166,7 @@
             this.cbCPop.AutoSize = true;
             this.cbCPop.Checked = true;
             this.cbCPop.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbCPop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCPop.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCPop.Location = new System.Drawing.Point(174, 24);
             this.cbCPop.Name = "cbCPop";
@@ -172,6 +180,7 @@
             this.cbJPop.AutoSize = true;
             this.cbJPop.Checked = true;
             this.cbJPop.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbJPop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbJPop.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbJPop.Location = new System.Drawing.Point(100, 24);
             this.cbJPop.Name = "cbJPop";
@@ -185,6 +194,7 @@
             this.cbVPop.AutoSize = true;
             this.cbVPop.Checked = true;
             this.cbVPop.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbVPop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbVPop.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVPop.Location = new System.Drawing.Point(26, 24);
             this.cbVPop.Name = "cbVPop";
@@ -195,6 +205,7 @@
             // 
             // txbSearch
             // 
+            this.txbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txbSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbSearch.ForeColor = System.Drawing.Color.Gainsboro;
@@ -215,6 +226,7 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.ForeColor = System.Drawing.Color.Gainsboro;
