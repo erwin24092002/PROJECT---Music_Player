@@ -36,6 +36,7 @@ namespace Music_Player.Forms
 
             pContent.Controls.Clear();
             pContent.Controls.Add(new Description(song));
+            ActivateButton(this.btnDiscription, rgbColors[0]);
         }
 
         private void ActivateButton(object sender, Color color)
