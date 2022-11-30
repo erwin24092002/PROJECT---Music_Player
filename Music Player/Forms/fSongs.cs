@@ -15,9 +15,11 @@ namespace Music_Player.Forms
     public partial class fSongs : Form
     {
         private DataTable songs = new MySongs().Songs;
-        public fSongs()
+        private SongItem[] songItems;
+        public fSongs(SongItem[] st)
         {
             InitializeComponent();
+            this.songItems = st;
             RenderSongs();
         }
         private void RenderSongs()
@@ -35,16 +37,15 @@ namespace Music_Player.Forms
                     continue;
                 if (!cbUSUK.Checked && song["type"].ToString() == "USUK")
                     continue;
-                if (!cbLow.Checked && Int16.Parse(song["star"].ToString()) < 2)
+                if (!cbLow.Checked && Int16.Parse(song["star"].ToString()) <= 2)
                     continue;
                 if (!cbMedium.Checked && Int16.Parse(song["star"].ToString()) == 3)
                     continue;
                 if (!cbHigh.Checked && Int16.Parse(song["star"].ToString()) >= 4)
                     continue;
 
-                SongItem songItem = new SongItem(song);
-                songItem.Tag = song;
-                flpSongs.Controls.Add(songItem);
+                int id = Int32.Parse(song["id"].ToString());
+                flpSongs.Controls.Add(songItems[id]);
             }
         }
 

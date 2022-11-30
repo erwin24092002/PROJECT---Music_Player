@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -20,7 +21,8 @@ namespace Music_Player
         private Panel leftBorderBtn;
         private MyColors myColors = new MyColors();
         private Form currentChildForm;
-        public Form currentMusicPlayer;
+        private Form currentMusicPlayer;
+        private DataTable songs = new MySongs().Songs;
         public fMainMenu()
         {
             InitializeComponent();
@@ -31,6 +33,20 @@ namespace Music_Player
             this.Text = String.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
+        }
+
+        private SongItem[] create_SongItems()
+        {
+            SongItem[] st = new SongItem[31];
+            for (int i = 1; i <= 30; i++)
+            {
+                SongItem songItem = new SongItem(songs.Rows[i - 1]);
+                st[i] = songItem;
+                st[i].Tag = songs.Rows[i - 1];
+                st[i].btnPlay.Tag = songs.Rows[i - 1];
+                st[i].btnPlay.Click += btnPlay_Click;
+            }
+            return st;
         }
 
         private void ActivateButton(object sender, Color color)
@@ -102,11 +118,7 @@ namespace Music_Player
         private void btnSongs_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, myColors.RGBColors[0]);
-            fSongs f = new fSongs();
-            foreach (SongItem songItem in f.flpSongs.Controls)
-            {
-                songItem.btnPlay.Click += btnPlay_Click;
-            }
+            fSongs f = new fSongs(create_SongItems());
             OpenChildForm(f);
         }
 
@@ -170,6 +182,30 @@ namespace Music_Player
         private void ptbLogo_Click(object sender, EventArgs e)
         {
             Reset();
+        }
+
+        private LoveSongItem[] create_LoveSongItems()
+        {
+            LoveSongItem[] loveSongItems = new LoveSongItem[30];
+            string filePath = "lyrics/love_songs.txt";
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach(string line in lines)
+            {
+                int id = Int32.Parse(line);
+                loveSongItems[id] = new LoveSongItem(songs.Rows[id - 1]);
+                loveSongItems[id].Tag = songs.Rows[id - 1];
+                loveSongItems[id].btnPlay.Tag = songs.Rows[id - 1];
+                loveSongItems[id].btnPlay.Click += btnPlay_Click;
+            }
+            return loveSongItems;
+        }
+
+        private void btnLoveSongs_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, myColors.RGBColors[2]);
+            fSongs f = new fSongs(create_SongItems());
+            OpenChildForm(f);
         }
     }
 }
