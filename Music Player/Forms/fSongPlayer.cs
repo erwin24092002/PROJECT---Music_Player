@@ -81,8 +81,9 @@ namespace Music_Player.Forms
 
         private void fSongPlayer_Load(object sender, EventArgs e)
         {
-            string url = "song_mp3";
-
+            string url = "song_mp4/" + song["name"] + ".mp4";
+            wmdSongPlayer.URL= url;
+            wmdSongPlayer.Ctlcontrols.play();
 
         }
     }

@@ -122,10 +122,10 @@
             // wmdSongPlayer
             // 
             this.wmdSongPlayer.Enabled = true;
-            this.wmdSongPlayer.Location = new System.Drawing.Point(12, 12);
+            this.wmdSongPlayer.Location = new System.Drawing.Point(12, 3);
             this.wmdSongPlayer.Name = "wmdSongPlayer";
             this.wmdSongPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmdSongPlayer.OcxState")));
-            this.wmdSongPlayer.Size = new System.Drawing.Size(354, 174);
+            this.wmdSongPlayer.Size = new System.Drawing.Size(354, 221);
             this.wmdSongPlayer.TabIndex = 1;
             // 
             // fSongPlayer

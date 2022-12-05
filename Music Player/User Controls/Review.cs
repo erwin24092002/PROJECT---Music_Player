@@ -26,6 +26,7 @@ namespace Music_Player.User_Controls
         }
         private void RenderReview()
         {
+            flpReviews.Controls.Clear();
             string filePath = "comments/" + song["name"].ToString() + ".txt";
             List<string> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
@@ -57,6 +58,7 @@ namespace Music_Player.User_Controls
                 comments = File.ReadAllLines(filePath).ToList();
                 comments.Add(txbUserName.Text + "," + nmrUserStar.Value.ToString() + "," + rtbComment.Text);
                 File.WriteAllLines(filePath, comments.ToArray());
+                rtbComment.Text = "";
                 RenderReview();
             }
         }
