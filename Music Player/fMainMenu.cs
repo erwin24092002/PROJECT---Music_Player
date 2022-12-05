@@ -129,7 +129,7 @@ namespace Music_Player
 
         private void btnPlaylists_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, myColors.RGBColors[1]);
+            ActivateButton(sender, myColors.RGBColors[2]);
             OpenChildForm(new fPlaylists());
         }
 
@@ -203,7 +203,7 @@ namespace Music_Player
 
         private void btnLoveSongs_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, myColors.RGBColors[2]);
+            ActivateButton(sender, myColors.RGBColors[1]);
             fSongs f = new fSongs(create_SongItems());
             OpenChildForm(f);
         }

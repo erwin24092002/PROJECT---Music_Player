@@ -28,24 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSongPlayer));
             this.pHeader = new System.Windows.Forms.Panel();
+            this.ptbSongImage = new System.Windows.Forms.PictureBox();
             this.pControl = new System.Windows.Forms.Panel();
-            this.pContent = new System.Windows.Forms.Panel();
             this.btnReview = new FontAwesome.Sharp.IconButton();
             this.btnDiscription = new FontAwesome.Sharp.IconButton();
-            this.ptbSongImage = new System.Windows.Forms.PictureBox();
+            this.pContent = new System.Windows.Forms.Panel();
+            this.wmdSongPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.pHeader.SuspendLayout();
-            this.pControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSongImage)).BeginInit();
+            this.pControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wmdSongPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // pHeader
             // 
+            this.pHeader.Controls.Add(this.wmdSongPlayer);
             this.pHeader.Controls.Add(this.ptbSongImage);
             this.pHeader.Location = new System.Drawing.Point(0, 0);
             this.pHeader.Name = "pHeader";
             this.pHeader.Size = new System.Drawing.Size(378, 230);
             this.pHeader.TabIndex = 2;
+            // 
+            // ptbSongImage
+            // 
+            this.ptbSongImage.Location = new System.Drawing.Point(12, 12);
+            this.ptbSongImage.Name = "ptbSongImage";
+            this.ptbSongImage.Size = new System.Drawing.Size(354, 174);
+            this.ptbSongImage.TabIndex = 0;
+            this.ptbSongImage.TabStop = false;
             // 
             // pControl
             // 
@@ -55,13 +67,6 @@
             this.pControl.Name = "pControl";
             this.pControl.Size = new System.Drawing.Size(378, 44);
             this.pControl.TabIndex = 3;
-            // 
-            // pContent
-            // 
-            this.pContent.Location = new System.Drawing.Point(0, 270);
-            this.pContent.Name = "pContent";
-            this.pContent.Size = new System.Drawing.Size(378, 350);
-            this.pContent.TabIndex = 4;
             // 
             // btnReview
             // 
@@ -107,13 +112,21 @@
             this.btnDiscription.UseVisualStyleBackColor = true;
             this.btnDiscription.Click += new System.EventHandler(this.btnDiscription_Click);
             // 
-            // ptbSongImage
+            // pContent
             // 
-            this.ptbSongImage.Location = new System.Drawing.Point(12, 12);
-            this.ptbSongImage.Name = "ptbSongImage";
-            this.ptbSongImage.Size = new System.Drawing.Size(354, 174);
-            this.ptbSongImage.TabIndex = 0;
-            this.ptbSongImage.TabStop = false;
+            this.pContent.Location = new System.Drawing.Point(0, 270);
+            this.pContent.Name = "pContent";
+            this.pContent.Size = new System.Drawing.Size(378, 350);
+            this.pContent.TabIndex = 4;
+            // 
+            // wmdSongPlayer
+            // 
+            this.wmdSongPlayer.Enabled = true;
+            this.wmdSongPlayer.Location = new System.Drawing.Point(12, 12);
+            this.wmdSongPlayer.Name = "wmdSongPlayer";
+            this.wmdSongPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmdSongPlayer.OcxState")));
+            this.wmdSongPlayer.Size = new System.Drawing.Size(354, 174);
+            this.wmdSongPlayer.TabIndex = 1;
             // 
             // fSongPlayer
             // 
@@ -126,9 +139,11 @@
             this.Controls.Add(this.pHeader);
             this.Name = "fSongPlayer";
             this.Text = "fSongPlayer";
+            this.Load += new System.EventHandler(this.fSongPlayer_Load);
             this.pHeader.ResumeLayout(false);
-            this.pControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbSongImage)).EndInit();
+            this.pControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.wmdSongPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -140,5 +155,6 @@
         private System.Windows.Forms.PictureBox ptbSongImage;
         private FontAwesome.Sharp.IconButton btnReview;
         private FontAwesome.Sharp.IconButton btnDiscription;
+        private AxWMPLib.AxWindowsMediaPlayer wmdSongPlayer;
     }
 }

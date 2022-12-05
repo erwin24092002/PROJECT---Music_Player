@@ -36,7 +36,7 @@ namespace Music_Player.User_Controls
         }
         private void Button_Hover(object sender, EventArgs e)
         {
-            ((IconButton)sender).IconColor = rgbColors[0];
+            ((IconButton)sender).IconColor = rgbColors[1];
         }
         private void Button_Leave(object sender, EventArgs e)
         {

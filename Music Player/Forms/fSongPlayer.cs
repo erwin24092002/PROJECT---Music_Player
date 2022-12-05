@@ -78,5 +78,12 @@ namespace Music_Player.Forms
             pContent.Controls.Clear();
             pContent.Controls.Add(new Review(song));
         }
+
+        private void fSongPlayer_Load(object sender, EventArgs e)
+        {
+            string url = "song_mp3";
+
+
+        }
     }
 }
