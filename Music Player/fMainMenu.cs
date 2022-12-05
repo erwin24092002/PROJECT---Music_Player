@@ -45,6 +45,14 @@ namespace Music_Player
                 st[i].Tag = songs.Rows[i - 1];
                 st[i].btnPlay.Tag = songs.Rows[i - 1];
                 st[i].btnPlay.Click += btnPlay_Click;
+
+                st[i].btnHeart.Tag = songs.Rows[i - 1];
+                st[i].btnHeart.Click += btnHeart_Click;
+
+                st[i].btnCollect.Tag = songs.Rows[i - 1];
+
+                st[i].btnDownload.Tag = songs.Rows[i - 1];
+
             }
             return st;
         }
@@ -192,12 +200,19 @@ namespace Music_Player
             lines = File.ReadAllLines(filePath).ToList();
             foreach(string line in lines)
             {
-                int id = Int32.Parse(line);
                 DataRow tmp_s = songs.Select("id='" + line + "'")[0];
                 LoveSongItem tmp = new LoveSongItem(tmp_s);
                 tmp.Tag = tmp_s;
                 tmp.btnPlay.Tag = tmp_s;
                 tmp.btnPlay.Click += btnPlay_Click;
+
+                tmp.btnDisHeart.Tag = tmp_s;
+                tmp.btnDisHeart.Click += btnDisHeart_Click;
+
+                tmp.btnCollect.Tag = tmp_s;
+
+                tmp.btnDownload.Tag = tmp_s;
+
                 loveSongItems.Add(tmp);
             }
             return loveSongItems;
@@ -206,6 +221,41 @@ namespace Music_Player
         private void btnLoveSongs_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, myColors.RGBColors[1]);
+            fLoveSongs f = new fLoveSongs(create_LoveSongItems());
+            OpenChildForm(f);
+        }
+        private void btnHeart_Click(object sender, EventArgs e)
+        {
+            DataRow tmp_s = (DataRow)((IconButton)sender).Tag;
+            string filePath = "love_songs.txt";
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach(string line in lines)
+            {
+                if (tmp_s["id"].ToString() == line)
+                    return;
+            }
+            lines.Add(tmp_s["id"].ToString());
+            File.WriteAllLines(filePath, lines);
+        }
+
+        private void btnDisHeart_Click(object sender, EventArgs e)
+        {
+            DataRow tmp_s = (DataRow)((IconButton)sender).Tag;
+            //MessageBox.Show(tmp_s["id"].ToString());
+            string filePath = "love_songs.txt";
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            List<string> new_lines = new List<string>();
+            foreach (string line in lines)
+            {
+                //MessageBox.Show(line);
+                if (tmp_s["id"].ToString() == line)
+                    continue;
+                new_lines.Add(line);
+            }
+            File.WriteAllLines(filePath, new_lines);
+            //ActivateButton(sender, myColors.RGBColors[1]);
             fLoveSongs f = new fLoveSongs(create_LoveSongItems());
             OpenChildForm(f);
         }

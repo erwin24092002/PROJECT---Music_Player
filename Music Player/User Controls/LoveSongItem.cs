@@ -28,6 +28,7 @@ namespace Music_Player.User_Controls
             ptbSongImage.BackgroundImageLayout = ImageLayout.Zoom;
 
             lbSongName.Text = song["name"].ToString();
+            lbSongName.ForeColor = rgbColors[1];
             lbSongSinger.Text = song["singer"].ToString();
             lbSongDate.Text = song["date"].ToString();
 

@@ -179,9 +179,9 @@
         private System.Windows.Forms.Label lbSongName;
         private System.Windows.Forms.Label lbSongSinger;
         private System.Windows.Forms.Label lbSongDate;
-        private FontAwesome.Sharp.IconButton btnDownload;
-        private FontAwesome.Sharp.IconButton btnCollect;
-        private FontAwesome.Sharp.IconButton btnHeart;
+        public FontAwesome.Sharp.IconButton btnDownload;
+        public FontAwesome.Sharp.IconButton btnCollect;
+        public FontAwesome.Sharp.IconButton btnHeart;
         public FontAwesome.Sharp.IconButton btnPlay;
     }
 }

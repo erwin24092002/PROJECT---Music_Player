@@ -164,6 +164,7 @@
             this.Controls.Add(this.btnDisHeart);
             this.Controls.Add(this.btnCollect);
             this.Controls.Add(this.btnDownload);
+            this.Margin = new System.Windows.Forms.Padding(25, 20, 3, 3);
             this.Name = "LoveSongItem";
             this.Size = new System.Drawing.Size(812, 106);
             ((System.ComponentModel.ISupportInitialize)(this.ptbSongImage)).EndInit();
@@ -174,9 +175,9 @@
         #endregion
 
         public FontAwesome.Sharp.IconButton btnPlay;
-        private FontAwesome.Sharp.IconButton btnDisHeart;
-        private FontAwesome.Sharp.IconButton btnCollect;
-        private FontAwesome.Sharp.IconButton btnDownload;
+        public FontAwesome.Sharp.IconButton btnDisHeart;
+        public FontAwesome.Sharp.IconButton btnCollect;
+        public FontAwesome.Sharp.IconButton btnDownload;
         private System.Windows.Forms.Label lbSongDate;
         private System.Windows.Forms.Label lbSongSinger;
         private System.Windows.Forms.Label lbSongName;

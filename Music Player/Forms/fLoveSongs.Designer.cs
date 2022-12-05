@@ -39,9 +39,9 @@
             this.cbCPop = new System.Windows.Forms.CheckBox();
             this.cbJPop = new System.Windows.Forms.CheckBox();
             this.cbVPop = new System.Windows.Forms.CheckBox();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txbSearch = new System.Windows.Forms.TextBox();
             this.flpSongs = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.pSearch.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbType.SuspendLayout();
@@ -88,6 +88,7 @@
             this.cbHigh.TabIndex = 2;
             this.cbHigh.Text = "High";
             this.cbHigh.UseVisualStyleBackColor = true;
+            this.cbHigh.CheckedChanged += new System.EventHandler(this.SelectChange);
             // 
             // cbMedium
             // 
@@ -102,6 +103,7 @@
             this.cbMedium.TabIndex = 1;
             this.cbMedium.Text = "Medium";
             this.cbMedium.UseVisualStyleBackColor = true;
+            this.cbMedium.CheckedChanged += new System.EventHandler(this.SelectChange);
             // 
             // cbLow
             // 
@@ -116,6 +118,7 @@
             this.cbLow.TabIndex = 0;
             this.cbLow.Text = "Low";
             this.cbLow.UseVisualStyleBackColor = true;
+            this.cbLow.CheckedChanged += new System.EventHandler(this.SelectChange);
             // 
             // gbType
             // 
@@ -147,6 +150,7 @@
             this.cbUSUK.TabIndex = 4;
             this.cbUSUK.Text = "USUK";
             this.cbUSUK.UseVisualStyleBackColor = true;
+            this.cbUSUK.CheckedChanged += new System.EventHandler(this.SelectChange);
             // 
             // cbKPop
             // 
@@ -161,6 +165,7 @@
             this.cbKPop.TabIndex = 3;
             this.cbKPop.Text = "KPop";
             this.cbKPop.UseVisualStyleBackColor = true;
+            this.cbKPop.CheckedChanged += new System.EventHandler(this.SelectChange);
             // 
             // cbCPop
             // 
@@ -175,6 +180,7 @@
             this.cbCPop.TabIndex = 2;
             this.cbCPop.Text = "CPop";
             this.cbCPop.UseVisualStyleBackColor = true;
+            this.cbCPop.CheckedChanged += new System.EventHandler(this.SelectChange);
             // 
             // cbJPop
             // 
@@ -189,6 +195,7 @@
             this.cbJPop.TabIndex = 1;
             this.cbJPop.Text = "JPop";
             this.cbJPop.UseVisualStyleBackColor = true;
+            this.cbJPop.CheckedChanged += new System.EventHandler(this.SelectChange);
             // 
             // cbVPop
             // 
@@ -203,6 +210,29 @@
             this.cbVPop.TabIndex = 0;
             this.cbVPop.Text = "VPop";
             this.cbVPop.UseVisualStyleBackColor = true;
+            this.cbVPop.CheckedChanged += new System.EventHandler(this.SelectChange);
+            // 
+            // txbSearch
+            // 
+            this.txbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSearch.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txbSearch.Location = new System.Drawing.Point(146, 4);
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.Size = new System.Drawing.Size(517, 34);
+            this.txbSearch.TabIndex = 0;
+            this.txbSearch.TextChanged += new System.EventHandler(this.SelectChange);
+            // 
+            // flpSongs
+            // 
+            this.flpSongs.AutoScroll = true;
+            this.flpSongs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
+            this.flpSongs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpSongs.Location = new System.Drawing.Point(0, 90);
+            this.flpSongs.Name = "flpSongs";
+            this.flpSongs.Size = new System.Drawing.Size(765, 383);
+            this.flpSongs.TabIndex = 2;
             // 
             // btnSearch
             // 
@@ -219,27 +249,6 @@
             this.btnSearch.Size = new System.Drawing.Size(37, 35);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // txbSearch
-            // 
-            this.txbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearch.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txbSearch.Location = new System.Drawing.Point(146, 4);
-            this.txbSearch.Name = "txbSearch";
-            this.txbSearch.Size = new System.Drawing.Size(517, 34);
-            this.txbSearch.TabIndex = 0;
-            // 
-            // flpSongs
-            // 
-            this.flpSongs.AutoScroll = true;
-            this.flpSongs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
-            this.flpSongs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpSongs.Location = new System.Drawing.Point(0, 90);
-            this.flpSongs.Name = "flpSongs";
-            this.flpSongs.Size = new System.Drawing.Size(765, 383);
-            this.flpSongs.TabIndex = 2;
             // 
             // fLoveSongs
             // 

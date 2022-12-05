@@ -27,6 +27,8 @@ namespace Music_Player.Forms
             for (int i=0; i<love_songs.Count; i++)
             {
                 DataRow song = (DataRow)love_songs[i].Tag;
+                if (!(song["name"].ToString().ToLower().Contains(txbSearch.Text.ToLower()) || song["singer"].ToString().ToLower().Contains(txbSearch.Text.ToLower())))
+                    continue;
                 if (!cbVPop.Checked && song["type"].ToString() == "VPop")
                     continue;
                 if (!cbJPop.Checked && song["type"].ToString() == "JPop")
@@ -47,5 +49,11 @@ namespace Music_Player.Forms
                 flpSongs.Controls.Add(love_songs[i]);
             }
         }
+        private void SelectChange(object sender, EventArgs e)
+        {
+            RenderSongs();
+        }
+
+
     }
 }
