@@ -59,6 +59,18 @@
     <Compile Include="fMainMenu.Designer.cs">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fAddCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fAddCollection.Designer.cs">
+      <DependentUpon>fAddCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fDownload.Designer.cs">
+      <DependentUpon>fDownload.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fLoveSongs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,12 @@
     </Compile>
     <EmbeddedResource Include="fMainMenu.resx">
       <DependentUpon>fMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fAddCollection.resx">
+      <DependentUpon>fAddCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fDownload.resx">
+      <DependentUpon>fDownload.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fLoveSongs.resx">
       <DependentUpon>fLoveSongs.cs</DependentUpon>

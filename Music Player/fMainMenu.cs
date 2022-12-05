@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -52,6 +53,7 @@ namespace Music_Player
                 st[i].btnHeart.Click += btnHeart_Click;
 
                 st[i].btnCollect.Tag = songs.Rows[i - 1];
+                st[i].btnCollect.Click += btnCollect_Click;
 
                 st[i].btnDownload.Tag = songs.Rows[i - 1];
                 st[i].btnDownload.Click += btnDownload_Click;
@@ -139,7 +141,7 @@ namespace Music_Player
 
         private void btnPlaylists_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, myColors.RGBColors[2]);
+            ActivateButton(sender, myColors.RGBColors[4]);
             OpenChildForm(new fPlaylists());
         }
 
@@ -212,6 +214,7 @@ namespace Music_Player
                 tmp.btnDisHeart.Click += btnDisHeart_Click;
 
                 tmp.btnCollect.Tag = tmp_s;
+                tmp.btnCollect.Click += btnCollect_Click;
 
                 tmp.btnDownload.Tag = tmp_s;
                 tmp.btnDownload.Click += btnDownload_Click;
@@ -265,16 +268,16 @@ namespace Music_Player
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
-            string sourceFile = @"song_mp4/Deja Vu.mp4";
-            string destinationFile = @"Deja Vu.mp4";
-            try
-            {
-                File.Copy(sourceFile, destinationFile, true);
-            }
-            catch (IOException iox)
-            {
-                Console.WriteLine(iox.Message);
-            }
+            DataRow tmp_s = (DataRow)((IconButton)sender).Tag;
+            fDownload f = new fDownload(tmp_s);
+            f.ShowDialog();
+        }
+
+        private void btnCollect_Click(object sender, EventArgs e)
+        {
+            DataRow tmp_s = (DataRow)((IconButton)sender).Tag;
+            fAddCollection f = new fAddCollection(tmp_s);
+            f.ShowDialog();
         }
     }
 }
