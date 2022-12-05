@@ -8,7 +8,9 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -52,7 +54,7 @@ namespace Music_Player
                 st[i].btnCollect.Tag = songs.Rows[i - 1];
 
                 st[i].btnDownload.Tag = songs.Rows[i - 1];
-
+                st[i].btnDownload.Click += btnDownload_Click;
             }
             return st;
         }
@@ -212,6 +214,7 @@ namespace Music_Player
                 tmp.btnCollect.Tag = tmp_s;
 
                 tmp.btnDownload.Tag = tmp_s;
+                tmp.btnDownload.Click += btnDownload_Click;
 
                 loveSongItems.Add(tmp);
             }
@@ -258,6 +261,20 @@ namespace Music_Player
             //ActivateButton(sender, myColors.RGBColors[1]);
             fLoveSongs f = new fLoveSongs(create_LoveSongItems());
             OpenChildForm(f);
+        }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            string sourceFile = @"song_mp4/Deja Vu.mp4";
+            string destinationFile = @"Deja Vu.mp4";
+            try
+            {
+                File.Copy(sourceFile, destinationFile, true);
+            }
+            catch (IOException iox)
+            {
+                Console.WriteLine(iox.Message);
+            }
         }
     }
 }
