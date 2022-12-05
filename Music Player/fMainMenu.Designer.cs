@@ -78,7 +78,7 @@
             this.btnLoveSongs.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLoveSongs.IconSize = 32;
             this.btnLoveSongs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoveSongs.Location = new System.Drawing.Point(0, 233);
+            this.btnLoveSongs.Location = new System.Drawing.Point(0, 178);
             this.btnLoveSongs.Name = "btnLoveSongs";
             this.btnLoveSongs.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnLoveSongs.Size = new System.Drawing.Size(215, 55);
@@ -92,7 +92,6 @@
             // btnPlaylists
             // 
             this.btnPlaylists.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPlaylists.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPlaylists.FlatAppearance.BorderSize = 0;
             this.btnPlaylists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlaylists.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,11 +101,11 @@
             this.btnPlaylists.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPlaylists.IconSize = 32;
             this.btnPlaylists.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylists.Location = new System.Drawing.Point(0, 178);
+            this.btnPlaylists.Location = new System.Drawing.Point(0, 234);
             this.btnPlaylists.Name = "btnPlaylists";
             this.btnPlaylists.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPlaylists.Size = new System.Drawing.Size(215, 55);
-            this.btnPlaylists.TabIndex = 2;
+            this.btnPlaylists.TabIndex = 4;
             this.btnPlaylists.Text = "Playlists";
             this.btnPlaylists.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlaylists.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

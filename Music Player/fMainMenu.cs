@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Resources;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Channels;
 using System.Text;
@@ -138,11 +139,54 @@ namespace Music_Player
         {
             OpenMusicPlayer(new fSongPlayer((DataRow)((IconButton)sender).Tag));
         }
+        private void PlaylistItem_Click(object sender, EventArgs e)
+        {
+            OpenMusicPlayer(new fSongPlayer((DataRow)((PictureBox)sender).Tag));
+        }
+
+        private List<Playlist> create_PlaylistItems()
+        {
+            List<Playlist> list = new List<Playlist>();
+            DirectoryInfo d = new DirectoryInfo(@"playlists");
+            FileInfo[] Files = d.GetFiles("*.txt");
+            foreach (FileInfo file in Files)
+            {
+                Playlist tmp_playlist = new Playlist(file);
+                ResourceManager songImageManager = new ResourceManager("Music_Player.SongImages", Assembly.GetExecutingAssembly());
+                string filePath = @"playlists/" + file.Name;
+                List<string> lines = new List<string>();
+                lines = File.ReadAllLines(filePath).ToList();
+                foreach (string line in lines)
+                {
+                    DataRow song = songs.Select("id='" + line + "'")[0];
+                    int w = 110;
+                    int h = 100;
+                    Bitmap bm = new Bitmap(w, h);
+                    Graphics g = Graphics.FromImage(bm);
+                    g.DrawImage((Image)songImageManager.GetObject(string.Join("_", song["name"].ToString().Split(' '))), 0, 0, w, h);
+                    g.Dispose();
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.Image = bm;
+                    pictureBox.BackgroundImageLayout = ImageLayout.Zoom;
+                    pictureBox.Size = new Size(w, h);
+                    pictureBox.Margin = new Padding(10, 10, 0, 2);
+                    pictureBox.BorderStyle = BorderStyle.Fixed3D;
+                    pictureBox.Cursor = Cursors.Hand;
+                    pictureBox.Tag = song;
+                    pictureBox.Click += PlaylistItem_Click;
+
+                    tmp_playlist.Tag = file;
+                    tmp_playlist.flpSonglist.Controls.Add(pictureBox);
+                }
+                list.Add(tmp_playlist);
+            }
+            return list;
+        }
 
         private void btnPlaylists_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, myColors.RGBColors[4]);
-            OpenChildForm(new fPlaylists());
+            OpenChildForm(new fPlaylists(create_PlaylistItems()));
         }
 
         private void Reset()

@@ -122,6 +122,12 @@
     <Compile Include="User Controls\LoveSongItem.Designer.cs">
       <DependentUpon>LoveSongItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\Playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Playlist.Designer.cs">
+      <DependentUpon>Playlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\Review.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\LoveSongItem.resx">
       <DependentUpon>LoveSongItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Playlist.resx">
+      <DependentUpon>Playlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Review.resx">
       <DependentUpon>Review.cs</DependentUpon>
