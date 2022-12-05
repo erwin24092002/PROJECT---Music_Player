@@ -184,19 +184,21 @@ namespace Music_Player
             Reset();
         }
 
-        private LoveSongItem[] create_LoveSongItems()
+        private List<LoveSongItem> create_LoveSongItems()
         {
-            LoveSongItem[] loveSongItems = new LoveSongItem[30];
-            string filePath = "lyrics/love_songs.txt";
+            List<LoveSongItem> loveSongItems = new List<LoveSongItem>();
+            string filePath = "love_songs.txt";
             List<string> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
             foreach(string line in lines)
             {
                 int id = Int32.Parse(line);
-                loveSongItems[id] = new LoveSongItem(songs.Rows[id - 1]);
-                loveSongItems[id].Tag = songs.Rows[id - 1];
-                loveSongItems[id].btnPlay.Tag = songs.Rows[id - 1];
-                loveSongItems[id].btnPlay.Click += btnPlay_Click;
+                DataRow tmp_s = songs.Select("id='" + line + "'")[0];
+                LoveSongItem tmp = new LoveSongItem(tmp_s);
+                tmp.Tag = tmp_s;
+                tmp.btnPlay.Tag = tmp_s;
+                tmp.btnPlay.Click += btnPlay_Click;
+                loveSongItems.Add(tmp);
             }
             return loveSongItems;
         }
@@ -204,7 +206,7 @@ namespace Music_Player
         private void btnLoveSongs_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, myColors.RGBColors[1]);
-            fSongs f = new fSongs(create_SongItems());
+            fLoveSongs f = new fLoveSongs(create_LoveSongItems());
             OpenChildForm(f);
         }
     }

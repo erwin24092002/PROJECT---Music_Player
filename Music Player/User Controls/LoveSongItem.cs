@@ -20,7 +20,6 @@ namespace Music_Player.User_Controls
         public LoveSongItem(DataRow s)
         {
             InitializeComponent();
-            InitializeComponent();
             song = s;
             rgbColors = new MyColors().RGBColors;
 
