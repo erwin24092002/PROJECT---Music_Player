@@ -73,7 +73,7 @@
             this.btnLoveSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoveSongs.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoveSongs.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLoveSongs.IconChar = FontAwesome.Sharp.IconChar.Bathtub;
+            this.btnLoveSongs.IconChar = FontAwesome.Sharp.IconChar.HeartPulse;
             this.btnLoveSongs.IconColor = System.Drawing.Color.Gainsboro;
             this.btnLoveSongs.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLoveSongs.IconSize = 32;
@@ -96,7 +96,7 @@
             this.btnPlaylists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlaylists.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlaylists.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPlaylists.IconChar = FontAwesome.Sharp.IconChar.Bathtub;
+            this.btnPlaylists.IconChar = FontAwesome.Sharp.IconChar.List;
             this.btnPlaylists.IconColor = System.Drawing.Color.Gainsboro;
             this.btnPlaylists.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPlaylists.IconSize = 32;
@@ -120,7 +120,7 @@
             this.btnSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSongs.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSongs.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSongs.IconChar = FontAwesome.Sharp.IconChar.Bathtub;
+            this.btnSongs.IconChar = FontAwesome.Sharp.IconChar.Music;
             this.btnSongs.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSongs.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSongs.IconSize = 32;

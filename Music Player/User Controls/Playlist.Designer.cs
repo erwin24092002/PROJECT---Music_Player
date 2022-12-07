@@ -90,7 +90,7 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton btnRemove;
+        public FontAwesome.Sharp.IconButton btnRemove;
         private System.Windows.Forms.Label lbPlaylistName;
         public System.Windows.Forms.FlowLayoutPanel flpSonglist;
     }

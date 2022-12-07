@@ -16,6 +16,7 @@ using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Music_Player
 {
@@ -175,12 +176,61 @@ namespace Music_Player
                     pictureBox.Tag = song;
                     pictureBox.Click += PlaylistItem_Click;
 
+                    IconButton btnRemoveSong = new IconButton();
+                    btnRemoveSong.Tag = file.Name + "," + song["id"].ToString();
+                    btnRemoveSong.Size = new Size(20, 20);
+                    btnRemoveSong.IconSize = 15;
+                    btnRemoveSong.Location = new Point(85, 1);
+                    btnRemoveSong.FlatStyle = FlatStyle.Flat;
+                    btnRemoveSong.BackColor = Color.Transparent;
+                    btnRemoveSong.IconColor = myColors.RGBColors[4];
+                    btnRemoveSong.IconChar = IconChar.Remove;
+                    btnRemoveSong.ImageAlign = ContentAlignment.MiddleCenter;
+                    btnRemoveSong.Click += btnRemoveSong_Click;
+                    btnRemoveSong.BringToFront();
+                    
+                    pictureBox.Controls.Add(btnRemoveSong);
+
                     tmp_playlist.Tag = file;
                     tmp_playlist.flpSonglist.Controls.Add(pictureBox);
+
+                    tmp_playlist.btnRemove.Tag = file;
+                    tmp_playlist.btnRemove.Click += btnRemove_Click;
                 }
                 list.Add(tmp_playlist);
             }
             return list;
+        }
+        private void btnRemoveSong_Click(object sender, EventArgs e)
+        {
+            string fileName = ((String)((IconButton)sender).Tag).Split(',')[0];
+            string imageId = ((String)((IconButton)sender).Tag).Split(',')[1];
+
+            string filePath = @"playlists/" + fileName;
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            List<string> new_lines = new List<string>();
+            bool flag = true;
+            foreach(string line in lines)
+            {
+                if (line == imageId && flag)
+                {
+                    flag = false;
+                    continue;
+                }
+                new_lines.Add(line);
+            }
+            File.WriteAllLines(filePath, new_lines);
+            ActivateButton(sender, myColors.RGBColors[4]);
+            OpenChildForm(new fPlaylists(create_PlaylistItems()));
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            string fileName = ((FileInfo)(((IconButton)sender).Tag)).Name;
+            File.Delete(@"playlists/" + fileName);
+            ActivateButton(sender, myColors.RGBColors[4]);
+            OpenChildForm(new fPlaylists(create_PlaylistItems()));
         }
 
         private void btnPlaylists_Click(object sender, EventArgs e)

@@ -29,7 +29,6 @@ namespace Music_Player.User_Controls
         }
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            Application.Exit();
         }
 
         private void btnRemove_MouseLeave(object sender, EventArgs e)
